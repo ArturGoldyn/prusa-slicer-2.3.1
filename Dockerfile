@@ -7,3 +7,5 @@ RUN apt-get update && apt-get install -y git cmake build-essential pkg-config li
 RUN git clone --branch version_2.3.1 https://github.com/prusa3d/PrusaSlicer
 RUN cd PrusaSlicer && cmake . -DSLIC3R_WX_STABLE=1 -DSLIC3R_GTK=3
 RUN cd PrusaSlicer && make -j4
+
+RUN apt-get install -y admesh
